@@ -68,33 +68,28 @@ input::-ms-clear {
 @import "common/slick.scss";
 @import "common/slick-theme.scss";
 
-@media screen and (max-width: 1190px){
+@media screen and (max-width: 1199px){
   .wrapper {
     width: 100%;
     padding-right: 10px;
     padding-left: 10px;
 
   }
-  .block {
+  .section {
     padding: 60px 0;
   }
   .title {
-    font-size: 36px;
+    font-size: 44px;
+    line-height: 1.2;
   }
-}
-
-
-@media screen and (max-width: 1169px) {
-
 }
 
 @media (max-width: 1023px){
   .title {
     font-size: 39px;
-    line-height: 39px;
   }
 
-  .block {
+  .section {
     padding: 40px 0;
   }
 }
@@ -102,9 +97,8 @@ input::-ms-clear {
 @media (max-width: 767px) {
   .title {
     font-size: 34px;
-    line-height: 34px;
   }
-  .block {
+  .section {
     padding: 30px 0;
   }
 }
@@ -116,7 +110,7 @@ input::-ms-clear {
     line-height: 29px;
   }
 
-  .block {
+  .section {
     padding: 25px 0;
   }
 }
