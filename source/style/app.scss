@@ -47,7 +47,18 @@ input::-ms-clear {
   background-image: url('../img/lb__bg.png');
 }
 
+.title {
+  color: #000000;
+  font-size: 44px;
+  line-height: 1.2;
+  font-weight: 900;
+}
 
+.colortext {
+  &_blue {
+    color: #45b9bd;
+  }
+}
 
 
 ::-webkit-input-placeholder { color: #333333; font-size: 16px; }
@@ -80,10 +91,6 @@ input::-ms-clear {
   }
   .section {
     padding: 60px 0;
-  }
-  .title {
-    font-size: 44px;
-    line-height: 1.2;
   }
 }
 
