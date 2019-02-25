@@ -43,6 +43,9 @@ ul {
 input::-ms-clear {
   display: none;
 }
+.white__section {
+  background-image: url('../img/lb__bg.png');
+}
 
 
 
@@ -55,14 +58,14 @@ input::-ms-clear {
 
 
 @import "common/a__header";
-@import "common/b__history";
+@import "common/b__component";
 @import "common/c__today";
-@import "common/d__feel";
+@import "common/d__review";
 @import "common/e__effect";
-@import "common/f__expert";
+@import "common/f__doctor";
 @import "common/g__reviews";
-@import "common/h__reciept";
-@import "common/i__last-section";
+@import "common/h__use";
+@import "common/i__order";
 @import "common/j__footer";
 @import "common/popup.scss";
 @import "common/slick.scss";
