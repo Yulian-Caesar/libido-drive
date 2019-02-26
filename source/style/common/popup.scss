@@ -1,0 +1,73 @@
+.ever-popup__close:after,
+.ever-popup__close:before {
+  background-color: #fc1e1e !important;
+}
+
+.popup-wrap {
+  display: flex;
+  padding: 0 50px 0 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: #222222 url("../img/section-dark_before.png") no-repeat center;
+}
+
+.popup-img {
+  position: relative;
+  width: 460px;
+  margin-left: -35px;
+}
+
+.popup-img__product {
+  position: absolute;
+  left: 70px;
+  bottom: -50px;
+  max-width: 370px;
+}
+
+.popup-img__people img {
+  display: block;
+}
+
+.popup-form {
+  padding: 35px 0;
+  width: 320px;
+  flex: none;
+}
+
+.popup-button {
+  font-size: 28px;
+}
+
+
+@media screen and (min-width: 1024px){
+  .ever-popup__inner {
+    padding-top: 0 !important;
+  }
+
+  .ever-popup__close {
+    top: 10px !important;
+    right: 10px !important;
+  }
+
+  .ever-popup__close:after,
+  .ever-popup__close:before {
+    width: 30px !important;
+    height: 3px !important;
+  }
+
+}
+
+@media screen and (max-width: 1023px){
+  .popup-wrap {
+    padding: 20px 10px;
+  }
+
+  .popup-form {
+    width: 280px;
+    padding: 0;
+  }
+
+  .popup-img {
+    display: none;
+  }
+}
