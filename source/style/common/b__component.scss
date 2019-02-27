@@ -95,6 +95,16 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
+      &--2 {
+        & span {
+          min-width: 205px;
+        }
+      }
+      &--3 {
+        & span {
+          min-width: 235px;
+        }
+      }
       &::before {
         content: '';
         position: absolute;
@@ -199,6 +209,7 @@
           border-top-width: 40px;
         }
         & span {
+          min-width: auto;
           font-size: 18px;
           padding-left: 5px;
           padding-right: 5px;

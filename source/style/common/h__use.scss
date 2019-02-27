@@ -1,6 +1,130 @@
 .use {
-
+  padding-top: 80px;
+  padding-bottom: 79px;
+  &__content {
+    margin-top: 29px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    text-align: center;
+    width: 370px;
+    position: relative;
+    transition: .5s;
+    &--line {
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        width: 167px;
+        height: 1px;
+        background-color: #45b9bd;
+        top: 35px;
+      }
+      &::before {
+        right: -98px;
+      }
+      &::after {
+        left: -98px;
+      }
+    }
+    &:hover {
+      & .use__ico {
+        transition: .5s;
+        background-color: #45b9bd;
+      }
+      & .use__svg {
+        transition: .5s;
+        fill: #fff;
+      }
+    }
+  }
+  &__svg {
+    transition: .5s;
+  }
+  &__ico {
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #45b9bd;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    &--1 {
+      & svg {
+        width: 20px;
+        height: 46px;
+      }
+    }
+    &--2 {
+      & svg {
+        width: 45px;
+        height: 45px;
+      }
+    }
+    &--3 {
+      & svg {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+  &__text {
+    margin-top: 12px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  &__subtitle {
+    color: #444444;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    margin-top: 26px;
+  }
+  &__foto {
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: 118px;
+  }
+  &__des {
+    font-weight: 400;
+    margin-top: 26px;
+    text-align: center;
+    color: #444444;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 44px;
+  }
+  &__btn {
+    cursor: pointer;
+    margin-top: 19px;
+    width: 390px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 34px;
+  }
 }
+path.land {
+  fill: #e8e7e7 !important;
+  stroke: #fff !important;
+}
+span.active-location-text {
+  color: #ffffff !important;
+  background: none !important;
+}
+path.land.active {
+  fill: #45b9bd !important;
+  stroke: none !important;
+}
+
 .line {
   width: 100%;
   height: 1px;
@@ -25,5 +149,121 @@
   &::before {
     border: 15px solid transparent;
     border-top: 11px solid #d9d9d9;
+  }
+}
+@media screen and (max-width: 1199px){
+  .current-country {
+    font-size: 38px !important;
+    line-height: 1.2 !important;
+  }
+  .use {
+    &__content {
+      margin-top: 20px;
+    }
+    &__item {
+      &--line {
+        &::before {
+          right: -85px;
+        }
+        &::after {
+          left: -85px;
+        }
+      }
+    }
+    &__subtitle {
+      margin-top: 20px;
+    }
+    &__foto {
+      margin-top: 20px;
+      margin-right: 0;
+    }
+    &__des {
+      margin-top: 20px;
+    }
+    &__btn {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 1023px){
+  .current-country {
+    font-size: 30px !important;
+    margin-bottom: 0 !important;
+  }
+  .use {
+    &__content {
+      justify-content: space-around;
+    }
+    &__item {
+      width: 200px;
+      &--line {
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+    &__foto {
+      max-width: 620px;
+    }
+    &__des {
+      line-height: 1.4;
+    }
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .current-country {
+    font-size: 26px !important;
+  }
+  .use {
+    &__foto {
+      max-width: 500px;
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  .current-country {
+    font-size: 24px !important;
+  }
+  .use {
+    &__text {
+      font-size: 16px;
+    }
+    &__foto {
+      max-width: 400px;
+    }
+  }
+}
+
+
+@media (max-width: 479px) {
+  .use {
+    &__content {
+      margin-top: 0;
+      flex-wrap: wrap;
+    }
+    &__item {
+      margin-top: 20px;
+      width: 150px;
+      &:last-child {
+        width: 100%;
+      }
+    }
+    &__text {
+      margin-top: 5px;
+    }
+    &__foto {
+      display: none;
+    }
+    &__btn {
+      font-size: 26px;
+      width: 300px;
+    }
   }
 }
