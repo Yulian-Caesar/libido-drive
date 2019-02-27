@@ -1,0 +1,23 @@
+.last-section {
+  padding-top: 50px;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 1023px){
+  .last-section {
+    padding: 40px 0;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .last-section {
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 479px){
+  .last-section {
+    padding: 25px 0;
+  }
+}

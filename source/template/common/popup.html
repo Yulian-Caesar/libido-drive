@@ -1,0 +1,45 @@
+<div class="ever-popup-build">
+    <div class="pop-up" id="cloneThis">
+        <div class="popup-wrap">
+            <div class="popup-img">
+               <div class="popup-img__people">
+                   <img src="./img/home-people.png" alt="">
+               </div>
+               <div class="popup-img__product">
+                   <img src="./img/product.png" alt="">
+               </div>
+            </div>
+            <div class="popup-form">
+                <form action="/submit" method="post" class="x_order_form">
+                    <div class="price">
+                        <div class="price-item price-old">
+                            <span class="price-item__title">Старая цена:</span>
+                            <div class="price-content">
+                                <span class="x_price_previous">322</span> <span class="x_currency">грн</span>
+                            </div>
+                        </div>
+                        <div class="price-item price-new">
+                            <span class="price-item__title">Новая цена:</span>
+                            <div class="price-content">
+                                <span class="x_price_current">228</span> <span class="x_currency">грн</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-box form-field_select x_country_select">
+                        <select class="country-select" name="country_code">
+                        </select>
+                    </div>
+                    <div class="field-box form-field_name">
+                        <input class="field-box__item" type="text" name="name" placeholder="Моё имя" required autocomplete="name">
+                    </div>
+                    <div class="field-box form-field_tel">
+                        <input class="field-box__item" type="tel" name="phone" placeholder="Мой телефон" required autocomplete="tel">
+                    </div>
+                    <button class="button popup-button">
+                        Заказать по скидке
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
