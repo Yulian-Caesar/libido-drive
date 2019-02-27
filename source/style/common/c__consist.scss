@@ -4,20 +4,32 @@
 
 .consist-title {
   color: #ffffff;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
-.consist-box {
-  display: flex;
+
+.consist-order {
+  position: relative;
 }
 
 .consist-product {
+  top: -310px;
+  left: 0;
+  position: absolute;
+  max-width: 350px;
   flex: none;
-  margin-right: 25px;
+}
+
+.consist-product img {
+  display: block;
 }
 
 .consist-wrap {
+  max-width: 800px;
+  margin-left: auto;
   display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
 }
 
 .consist-nav {
@@ -30,19 +42,22 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 15px 0;
+  padding: 15px 35px 15px 0;
   cursor: pointer;
 }
 
-.consist-nav__item.active .consist-nav__img {
+.consist-nav__item.active .consist-nav__img,
+.consist-nav__item:hover .consist-nav__img {
   border: 3px solid #45b9bd;
 }
 
-.consist-nav__item.active .consist-nav__text {
+.consist-nav__item.active .consist-nav__text,
+.consist-nav__item:hover .consist-nav__text{
   border-bottom: 1px solid #45b9bd;
 }
 
-.consist-nav__item.active .consist-nav__arrow {
+.consist-nav__item.active .consist-nav__arrow,
+.consist-nav__item:hover .consist-nav__arrow{
   display: block;
 }
 
@@ -55,7 +70,8 @@
 }
 
 .consist-content__item.active {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .consist-nav__img {
@@ -83,6 +99,8 @@
 }
 
 .consist-content {
+  width: 100%;
+  margin-top: 25px;
   padding: 15px;
   border-radius: 3px;
   background-color: #1e1e1e;
@@ -92,9 +110,11 @@
 
 .consist-content__img {
   margin-right: 15px;
+  flex: none;
 }
 
 .consist-content__img img {
+  display: block;
   border-radius: 5px;
 }
 
@@ -103,6 +123,7 @@
   font-size: 18px;
   line-height: 1.2;
   font-weight: 500;
+  margin-bottom: 15px;
 }
 
 .consist-content__text {
@@ -112,3 +133,177 @@
   line-height: 1.3;
 }
 
+.consist-button {
+  max-width: 270px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1199px){
+  .consist-title {
+    margin-bottom: 20px;
+  }
+
+  .consist-product {
+    top: -270px;
+    max-width: 280px;
+  }
+
+  .consist-wrap {
+    max-width: 725px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .consist-nav__item {
+    padding: 15px 35px 15px 0;
+  }
+
+  .consist-nav__img {
+    margin-right: 15px;
+  }
+
+  .consist-nav__text {
+    font-size: 20px;
+  }
+
+  .consist-nav {
+    width: 280px;
+    margin-right: 20px;
+  }
+
+  .consist-content {
+    padding: 10px;
+    margin: 0;
+  }
+
+  .consist-content__item {
+    align-items: center;
+  }
+
+  .consist-content__img {
+    max-width: 150px;
+  }
+
+  .consist-content__title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .consist-content__text {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+}
+
+@media screen and (max-width: 1023px){
+  .consist-wrap {
+    width: 100%;
+  }
+
+  .consist-title {
+    margin-bottom: 10px;
+  }
+
+  .consist-order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .consist-product {
+    position: static;
+    margin-right: 30px;
+  }
+
+  .consist-button {
+    margin: 0;
+  }
+
+}
+
+@media screen and (max-width: 767px){
+  .consist-title {
+    margin-bottom: 20px;
+  }
+
+  .consist-nav__img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .consist-nav__text {
+    font-size: 18px;
+  }
+
+  .consist-content__item {
+    flex-direction: column;
+  }
+
+  .consist-content__img {
+    margin-bottom: 10px;
+  }
+
+}
+
+@media screen and (max-width: 639px){
+  .consist-title br {
+    display: none;
+  }
+
+  .consist-wrap {
+    flex-direction: column;
+  }
+
+  .consist-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .consist-nav__item.active .consist-nav__arrow {
+    display: none;
+  }
+
+  .consist-nav__item + .consist-nav__item {
+    border: none;
+  }
+
+  .consist-nav__img {
+    margin: 0 0 10px 0;
+  }
+
+  .consist-nav__item {
+    padding: 0 10px;
+    flex-direction: column;
+  }
+
+  .consist-content__item {
+    text-align: center;
+  }
+
+  .consist-order {
+    flex-direction: column;
+  }
+
+  .consist-product {
+    margin: 0 0 20px 0;
+  }
+
+}
+
+@media screen and (max-width: 479px){
+  .consist-nav {
+    flex-wrap: wrap;
+  }
+
+  .consist-nav__item {
+    width: 50%;
+  }
+
+  .consist-nav__item:last-child {
+    margin-top: 15px;
+  }
+
+}
