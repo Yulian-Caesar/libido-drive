@@ -1,9 +1,9 @@
 .order {
-  padding: 75px 0 90px;
+  padding: 30px 0 90px;
 }
 
 .order-title {
-  margin-bottom: 40px;
+  margin: 40px 0;
 }
 
 .order-wrap {
@@ -131,8 +131,12 @@
 }
 
 @media screen and (max-width: 1199px){
+  .order.section {
+    padding-top: 30px;
+  }
+
   .order-title {
-    margin-bottom: 30px;
+    margin: 30px 0;
   }
 
   .order-item {
@@ -154,8 +158,12 @@
 }
 
 @media screen and (max-width: 1023px){
+  .order.section {
+    padding-top: 10px;
+  }
+
   .order-title {
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
 
   .order-item {
@@ -184,6 +192,10 @@
 }
 
 @media screen and (max-width: 767px){
+  .order.section {
+    padding-top: 0;
+  }
+
   .order-wrap {
     flex-wrap: wrap;
     justify-content: center;
