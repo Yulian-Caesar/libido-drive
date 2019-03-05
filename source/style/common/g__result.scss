@@ -185,6 +185,7 @@
   .result-content {
     justify-content: center;
     margin-left: 0;
+    padding: 30px;
   }
 
   .result-content__text {
@@ -289,9 +290,15 @@
     font-size: 16px;
   }
 
+  .result-wrap {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
   .result-item {
     width: 100%;
     padding: 0;
+    text-align: center;
   }
 
   .result-item:first-child {
@@ -306,6 +313,14 @@
   .result-item:nth-child(even) {
     border: none;
     padding: 0;
+  }
+
+  .result-item__number {
+    margin-bottom: 0;
+  }
+
+  .result-item__title {
+    margin-bottom: 5px;
   }
 
 }

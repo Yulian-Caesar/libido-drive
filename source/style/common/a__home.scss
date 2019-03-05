@@ -330,6 +330,10 @@
 }
 
 @media screen and (max-width: 639px){
+  .home-list {
+    max-width: 380px;
+  }
+
   .home-title {
     font-size: 30px;
   }
