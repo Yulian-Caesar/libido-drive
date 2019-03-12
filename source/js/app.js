@@ -51,14 +51,17 @@ for (var j = 0; j < reviewOpen.length; j++) {
 }
 // CONSISIT
 
-var consistTabs = function() {
-    var name = $(this).attr('class');
-    var number = name.split("-")[3];
-    $('.consist-content__item-' + number).addClass('active').siblings().removeClass('active');
-    $(this).addClass('active').siblings().removeClass('active');
+
+var addConsistContent = function() {
+    if($(window).width() > 479) {
+        $('.consist-nav__box').removeClass('active');
+        $(this).parent('.consist-nav__box').addClass('active');
+    } else {
+        $(this).parent('.consist-nav__box').toggleClass('active');
+    }
 };
 
-$(document).on('click', '.consist-nav__item', consistTabs);
+$(document).on('click', '.consist-nav__item', addConsistContent);
 
 // CONSISIT END
 

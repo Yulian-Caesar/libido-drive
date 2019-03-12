@@ -25,6 +25,7 @@
 }
 
 .consist-wrap {
+  position: relative;
   max-width: 800px;
   margin-left: auto;
   display: flex;
@@ -46,18 +47,15 @@
   cursor: pointer;
 }
 
-.consist-nav__item.active .consist-nav__img,
-.consist-nav__item:hover .consist-nav__img {
+.consist-nav__box.active .consist-nav__img{
   border: 3px solid #45b9bd;
 }
 
-.consist-nav__item.active .consist-nav__text,
-.consist-nav__item:hover .consist-nav__text{
+.consist-nav__box.active .consist-nav__text{
   border-bottom: 1px solid #45b9bd;
 }
 
-.consist-nav__item.active .consist-nav__arrow,
-.consist-nav__item:hover .consist-nav__arrow{
+.consist-nav__box.active .consist-nav__arrow{
   display: block;
 }
 
@@ -67,9 +65,18 @@
 
 .consist-content__item {
   display: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  max-width: 470px;
+  padding: 15px;
+  border-radius: 3px;
+  background-color: #1e1e1e;
 }
 
-.consist-content__item.active {
+.consist-nav__box.active .consist-content__item {
   display: flex;
   align-items: center;
 }
@@ -97,15 +104,6 @@
   right: -5px;
   transform: translate(0, -50%);
 }
-
-.consist-content {
-  width: 100%;
-  margin-top: 25px;
-  padding: 15px;
-  border-radius: 3px;
-  background-color: #1e1e1e;
-}
-
 
 
 .consist-content__img {
@@ -136,6 +134,20 @@
 .consist-button {
   max-width: 270px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 480px){
+  .consist-nav__item:hover .consist-nav__img {
+    border: 3px solid #45b9bd;
+  }
+
+  .consist-nav__item:hover .consist-nav__text{
+    border-bottom: 1px solid #45b9bd;
+  }
+
+  .consist-nav__item:hover .consist-nav__arrow{
+    display: block;
+  }
 }
 
 @media screen and (max-width: 1199px){
@@ -171,12 +183,10 @@
     margin-right: 20px;
   }
 
-  .consist-content {
+  .consist-content__item {
+    max-width: 430px;
     padding: 10px;
     margin: 0;
-  }
-
-  .consist-content__item {
     align-items: center;
   }
 
@@ -224,6 +234,10 @@
 }
 
 @media screen and (max-width: 767px){
+  .consist-wrap {
+    min-height: 320px;
+  }
+
   .consist-title {
     margin-bottom: 20px;
   }
@@ -238,6 +252,7 @@
   }
 
   .consist-content__item {
+    max-width: 320px;
     flex-direction: column;
   }
 
@@ -247,7 +262,17 @@
 
 }
 
+@media screen and (min-width: 480px) and (max-width: 639px){
+  .consist-nav__box.active .consist-nav__arrow {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 639px){
+  .consist-wrap {
+    min-height: 410px;
+  }
+
   .consist-title br {
     display: none;
   }
@@ -263,9 +288,6 @@
     margin: 0 0 20px 0;
   }
 
-  .consist-nav__item.active .consist-nav__arrow {
-    display: none;
-  }
 
   .consist-nav__item + .consist-nav__item {
     border: none;
@@ -281,7 +303,20 @@
   }
 
   .consist-content__item {
+    left: 50%;
     text-align: center;
+    transform: translate(-50%, 0);
+    top: initial;
+    bottom: 0;
+    max-width: 400px;
+  }
+
+  .consist-content__title {
+    min-height: 38px;
+  }
+
+  .consist-content__img {
+    margin: 0 auto 10px;
   }
 
   .consist-order {
@@ -295,16 +330,72 @@
 }
 
 @media screen and (max-width: 479px){
+  .consist-wrap {
+    min-height: 1px;
+  }
+
   .consist-nav {
-    flex-wrap: wrap;
+    max-width: 300px;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .consist-product {
+    max-width: 260px;
+    margin: 0 auto 20px;
+    margin-left: calc(50% - 118px);
   }
 
   .consist-nav__item {
-    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: inherit;
+    padding: 10px;
   }
 
-  .consist-nav__item:last-child {
-    margin-top: 15px;
+  .consist-nav__box {
+    border-radius: 10px;
+    background: #1e1e1e;
+    border: 1px solid transparent;
+  }
+
+  .consist-nav__box.active {
+    border: 1px solid #45b9bd;
+  }
+
+  .consist-nav__box + .consist-nav__box {
+    margin-top: 20px;
+  }
+
+  .consist-content__item {
+    position: static;
+    transform: none;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .consist-content__title {
+    min-height: 1px;
+  }
+
+  .consist-nav__img {
+    margin: 0 10px 0 0;
+  }
+
+  .consist-nav__arrow {
+    display: block;
+    margin-left: auto;
+    position: static;
+    transform: rotate(90deg);
+  }
+
+  .consist-nav__box.active .consist-nav__arrow {
+    transform: rotate(-90deg);
+  }
+
+  .consist-nav__img {
+    width: 50px;
+    height: 50px;
   }
 
 }

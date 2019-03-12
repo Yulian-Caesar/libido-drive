@@ -263,28 +263,15 @@
 }
 
 @media screen and (max-width: 479px){
-  .result-img {
-    flex-wrap: wrap;
-  }
-
   .result-img__item {
-    padding: 0 10px;
-    width: 50%;
-    max-width: 160px;
-  }
-
-  .result-img__item2,
-  .result-img__item3 {
-    margin: 0;
-  }
-
-  .result-img__item3 {
-    margin-top: 15px;
+    width: 110px;
   }
 
   .result-content {
     padding: 20px 10px;
+    max-width: 300px;
   }
+
 
   .result-content__text {
     font-size: 16px;

@@ -356,7 +356,8 @@ select:-moz-focusring {
 
   .dark-section:before,
   .dark-section:after {
-    display: none;
+    width: 100%;
+    background-size: contain;
   }
 
 }

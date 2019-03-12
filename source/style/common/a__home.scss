@@ -152,11 +152,11 @@
   align-items: center;
   justify-content: center;
   flex: none;
-  background: url("../img/discount.svg") no-repeat center;
+  background: url("../img/discount.svg") no-repeat center / contain ;
   width: 70px;
   height: 70px;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1;
   font-weight: 700;
 }
 
@@ -349,6 +349,11 @@
 @media screen and (max-width: 479px){
   .home {
     padding: 20px 0 30px;
+  }
+
+  .home-content__product {
+    max-width: 260px;
+    margin-left: calc(50% - 118px);
   }
 
   .home-title {
